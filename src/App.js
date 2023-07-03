@@ -13,11 +13,11 @@ const router = createBrowserRouter([
     element: <TemplateLayout  />,
     errorElement: <Error />,
     children: [
-      {path: '/', element: <Home />},
-      {path: '/home', element: <Home />},
-      {path: '/destination', element: <Destination />},
-      {path: '/crew', element: <Crew />},
-      {path: '/technology', element: <Technology />},
+      {path: '/space-tourism-react/', element: <Home />},
+      {path: '/space-tourism-react/home', element: <Home />},
+      {path: '/space-tourism-react/destination', element: <Destination />},
+      {path: '/space-tourism-react/crew', element: <Crew />},
+      {path: '/space-tourism-react/technology', element: <Technology />},
     ],
   },
 ]);

@@ -2,7 +2,9 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Header } from '../components/common/Header';
 
 export const TemplateLayout = () => {
-    let location = useLocation().pathname.replace(/^./, "");
+    //let location = useLocation().pathname.replace(/^./, "");
+    let location = useLocation().pathname.slice(21);
+    
     if (location === '') location = 'home'
 
     return (

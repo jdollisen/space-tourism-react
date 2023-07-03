@@ -12,7 +12,7 @@ export const Crew = () => {
     <main id="main" className="grid-container grid-container--crew flow">
       <h1 className="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
 
-      <div class="dot-indicators flex" role="tablist" aria-label="crew member list">
+      <div className="dot-indicators flex" role="tablist" aria-label="crew member list">
         <Indicator data={arrData} page={location} />
       </div>
       <Article data={arrData} page={location} />
