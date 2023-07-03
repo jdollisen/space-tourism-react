@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {path: '/space-tourism-react/crew', element: <Crew />},
       {path: '/space-tourism-react/technology', element: <Technology />},
     ],
-  },
+  }
 ]);
 
 export default function App() {
