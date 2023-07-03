@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useRef } from "react";
+import logo from '../../logo.svg';
 
 export const Header = (props) => {
     const location = useLocation().pathname.replace(/^./, "");
@@ -20,7 +21,7 @@ export const Header = (props) => {
     return(
         <header className="primary-header flex">
             <div>
-                <img src='../../assets/shared/logo.svg' alt="space tourism logo" className="logo" />
+                <img src={logo} alt="space tourism logo" className="logo" />
             </div>
             <button className="mobile-nav-toggle" aria-controls="primary-navigation" onClick={toggleMobileNav}><span className="sr-only" aria-expanded="false">Menu</span></button>
             <nav>
