@@ -2,7 +2,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { useRef } from "react";
 
 export const Header = (props) => {
-    const location = useLocation().pathname.replace(/^./, "");
+    //const location = useLocation().pathname.replace(/^./, "");
+    const location = useLocation().pathname.slice(21);
 
     // toggle hamburger menu
     const ref = useRef(null);
