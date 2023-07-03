@@ -1,7 +1,7 @@
 export const PosterImage = (props) => {
   return(<>
     {props.data.map((data, i) => {
-      if (props.page == 'technology') {
+      if (props.page === 'technology') {
         return(
           <picture key={data.id} id={data.id + "-image"}>
             <source srcSet={data.images.landscape} media="(max-width: 45em)" sizes="110%" />

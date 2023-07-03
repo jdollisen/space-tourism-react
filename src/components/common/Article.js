@@ -2,7 +2,7 @@ export const Article = (props) => {
     //console.log(props.page);
     return (<>
         {props.data.map((data, i) => {
-            if (props.page == 'destination') {
+            if (props.page === 'destination') {
                 return (
                     <article key={data.id} className="destination-info flow" id={data.id + "-tab"} tabIndex={i} role="tabpanel">
                         <h2 className="fs-800 uppercase ff-serif">{data.name}</h2>
@@ -19,7 +19,7 @@ export const Article = (props) => {
                         </div>
                     </article>
                 )
-            } else if (props.page == 'crew') {
+            } else if (props.page === 'crew') {
                 return (
                     <article key={data.id} className="crew-details flow" id={data.id + "-tab"} role="tabpanel" tabIndex="0">
                         <header className="flow flow--space-small">

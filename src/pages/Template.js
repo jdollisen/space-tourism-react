@@ -3,7 +3,7 @@ import { Header } from '../components/common/Header';
 
 export const TemplateLayout = () => {
     let location = useLocation().pathname.replace(/^./, "");
-    if (location == '') location = 'home'
+    if (location === '') location = 'home'
 
     return (
         <div className={location}>

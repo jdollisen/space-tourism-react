@@ -1,8 +1,7 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 function RenderButton(data) {
   const [currentTab, setCurrentTab] = useState(0);
-  const ref = useRef(null);
 
   const handleTabClick = (e) => {
     setCurrentTab(data.index);
@@ -33,7 +32,7 @@ function RenderButton(data) {
     //showContent(mainContainer, [`#${targetImage}`]);
   }*/
 
-function hideContent(parent, content) {
+/*function hideContent(parent, content) {
     parent
         .querySelectorAll(content)
         .forEach((item) => item.setAttribute("hidden", true));
@@ -41,7 +40,7 @@ function hideContent(parent, content) {
 
 function showContent(parent, content) {
     parent.querySelector(content).removeAttribute('hidden');
-}
+}*/
 
   return (
     <button key={data.index} 
@@ -59,14 +58,14 @@ export const Indicator = (props) => {
   return(<>
     { props.data.map((data, i) => {
 
-      if (props.page == 'destination') {
+      if (props.page === 'destination') {
 
         return <RenderButton key={i} index={i} id={data.id} name={data.name} 
           class='uppercase ff-sans-cond text-accent letter-spacing-2'
           text1=''
           text2={data.name} />
 
-      } else if (props.page == 'crew') {
+      } else if (props.page === 'crew') {
 
         return <RenderButton key={i} index={i} id={data.id} name={data.name} 
           class="sr-only"
