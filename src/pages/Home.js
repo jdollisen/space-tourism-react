@@ -12,7 +12,7 @@ export const Home = () => {
                     because we’ll give you a truly out of this world experience! </p>
             </div>
             <div>
-                <Link className="large-button uppercase ff-serif text-dark bg-white" to="/destination">Explore</Link>
+                <Link className="large-button uppercase ff-serif text-dark bg-white" to="/space-tourism-react/destination">Explore</Link>
             </div>
         </main>
     );

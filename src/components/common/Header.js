@@ -21,7 +21,7 @@ export const Header = (props) => {
     return(
         <header className="primary-header flex">
             <div>
-                <img src="./logo.svg" alt="space tourism logo" className="logo" />
+                <img src={require("../../assets/shared/logo.svg").default} alt="space tourism logo" className="logo" />
             </div>
             <button className="mobile-nav-toggle" aria-controls="primary-navigation" onClick={toggleMobileNav}><span className="sr-only" aria-expanded="false">Menu</span></button>
             <nav>

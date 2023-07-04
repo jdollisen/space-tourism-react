@@ -5,7 +5,8 @@ import { PosterImage } from "../components/common/PosterImage";
 import { SiteData } from "../SiteData";
 
 export const Technology = () => {
-  const location = useLocation().pathname.replace(/^./, "");
+  //const location = useLocation().pathname.replace(/^./, "");
+  const location = useLocation().pathname.slice(21);
   const arrData = SiteData[0].technology;
 
   return (

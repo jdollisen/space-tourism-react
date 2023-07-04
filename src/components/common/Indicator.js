@@ -5,46 +5,30 @@ function RenderButton(data) {
 
   const handleTabClick = (e) => {
     setCurrentTab(data.index);
+
+    const targetTab = e.target.closest('[role="tab"]');
+    const targetPanel = targetTab.getAttribute("aria-controls");
+    const targetImage = targetTab.getAttribute("data-image");
+
+    const tabContainer = targetTab.parentNode;
+    const mainContainer = tabContainer.parentNode;
+
+    tabContainer
+        .querySelector('[aria-selected="true"]')
+        .setAttribute("aria-selected", false);
+
+    targetTab.setAttribute("aria-selected", true);
+
+    hideContent(mainContainer, '[role="tabpanel"]');
+    showContent(mainContainer, [`#${targetPanel}`]);
+
+    hideContent(mainContainer, 'picture');
+    showContent(mainContainer, [`#${targetImage}`]);
   }
-
-  //  console.log(currentTab);
-
-  /*const handleTabClick2 = (e) => {
-    const targetTab = e.target;
-    //const targetPanel = targetTab.getAttribute("aria-controls");
-    //const targetImage = targetTab.getAttribute("data-image");
-    //console.log(targetTab);
-    const tabButton = targetTab.parentNode;
-    //const tabContainer = tabButton.parentNode;
-    //const mainContainer = tabContainer.parentNode;
-
-    const ariaSelected = tabButton.getAttribute("aria-selected");
-        if (ariaSelected === "false") {
-          tabButton.setAttribute("aria-selected", true);
-        } else {
-          tabButton.setAttribute("aria-selected", false);
-        }
-
-    //hideContent(mainContainer, '[role="tabpanel"]');
-    //showContent(mainContainer, [`#${targetPanel}`]);
-
-    //hideContent(mainContainer, 'picture');
-    //showContent(mainContainer, [`#${targetImage}`]);
-  }*/
-
-/*function hideContent(parent, content) {
-    parent
-        .querySelectorAll(content)
-        .forEach((item) => item.setAttribute("hidden", true));
-}
-
-function showContent(parent, content) {
-    parent.querySelector(content).removeAttribute('hidden');
-}*/
 
   return (
     <button key={data.index} 
-      aria-selected={(currentTab === data.index)?true:false}
+      aria-selected={(currentTab === data.index)?"true":"false"}
       aria-controls={data.id + "-tab"} 
       role="tab" 
       tabIndex={data.index} 
@@ -54,6 +38,15 @@ function showContent(parent, content) {
   )
 }
 
+function hideContent(parent, content) {
+  parent
+      .querySelectorAll(content)
+      .forEach((item) => item.setAttribute("hidden", true));
+}
+
+function showContent(parent, content) {
+  parent.querySelector(content).removeAttribute('hidden');
+}
 export const Indicator = (props) => {
   return(<>
     { props.data.map((data, i) => {

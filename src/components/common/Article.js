@@ -4,7 +4,12 @@ export const Article = (props) => {
         {props.data.map((data, i) => {
             if (props.page === 'destination') {
                 return (
-                    <article key={data.id} className="destination-info flow" id={data.id + "-tab"} tabIndex={i} role="tabpanel">
+                    <article key={data.id} 
+                    hidden={(i === 0)?false:true} 
+                    className="destination-info flow" 
+                    id={data.id + '-tab'} 
+                    tabIndex={data.index} 
+                    role="tabpanel">
                         <h2 className="fs-800 uppercase ff-serif">{data.name}</h2>
                         <p>{data.description}</p>
                         <div className="destination-meta flex">
@@ -21,17 +26,27 @@ export const Article = (props) => {
                 )
             } else if (props.page === 'crew') {
                 return (
-                    <article key={data.id} className="crew-details flow" id={data.id + "-tab"} role="tabpanel" tabIndex="0">
+                    <article key={data.id} 
+                    hidden={(i === 0)?false:true} 
+                    className="crew-details flow" 
+                    id={data.id + "-tab"} 
+                    tabIndex={data.index} 
+                    role="tabpanel">
                         <header className="flow flow--space-small">
-                        <h2 className="fs-600 ff-serif uppercase">{data.role}</h2>
-                        <p className="fs-700 uppercase ff-serif">{data.name}</p>
+                            <h2 className="fs-600 ff-serif uppercase">{data.role}</h2>
+                            <p className="fs-700 uppercase ff-serif">{data.name}</p>
                         </header>
                         <p>{data.bio}</p>
                     </article>
                 )
             } else { //technology
                 return (
-                    <article key={data.id} className="technology-details flow" id={data.id + "-tab"} role="tabpanel" tabIndex={i}>
+                    <article key={data.id} 
+                    hidden={(i === 0)?false:true} 
+                    className="technology-details flow" 
+                    id={data.id + "-tab"} 
+                    tabIndex={i} 
+                    role="tabpanel">
                         <header className="flow flow--space-small">
                             <h2 className="uppercase fs-400 ff-sans-cond text-accent letter-spacing-3">The terminology...</h2>
                             <h3 className="fs-700 uppercase ff-serif">{data.name}</h3>
