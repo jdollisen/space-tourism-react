@@ -97,6 +97,8 @@ div#root > div {
     display: grid;
     grid-template-rows: min-content 1fr;
     overflow-x: hidden;
+    background-size: cover;
+    background-position: bottom center;
 }
 
 /* make images easier to work with */
