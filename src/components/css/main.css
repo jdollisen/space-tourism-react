@@ -189,7 +189,7 @@ select {
 }
 
 .skip-to-content:focus {
-    /*transform: translateY(0);*/
+    transform: translateY(0);
 }
 
 /* colors */
