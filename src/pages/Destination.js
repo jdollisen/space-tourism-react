@@ -5,11 +5,11 @@ import { PosterImage } from "../components/common/PosterImage";
 import { SiteData } from "../SiteData";
 
 export const Destination = () => {
-  //const location = useLocation().pathname.replace(/^./, "");
-  const location = useLocation().pathname.slice(21);
   const arrData = SiteData[0].destination;
+  let location = useLocation().pathname.slice(21);
+      location = location.replace(/\//, "");
 
-  //console.log(arrData);
+  //console.log(location);
   return (
     <main id="main" className="grid-container grid-container--destination flow">
       <h1 className="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>

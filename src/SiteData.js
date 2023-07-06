@@ -5,8 +5,8 @@ export const SiteData = [
         "id": "moon",
         "name": "Moon",
         "images": {
-          "png": "./assets/destination/image-moon.png",
-          "webp": "./assets/destination/image-moon.webp",
+          "png": "/space-tourism-react/assets/destination/image-moon.png",
+          "webp": "/space-tourism-react/assets/destination/image-moon.webp",
           "alt": "the moon"
         },
         "description": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
@@ -17,8 +17,8 @@ export const SiteData = [
         "id": "mars",
         "name": "Mars",
         "images": {
-          "png": "./assets/destination/image-mars.png",
-          "webp": "./assets/destination/image-mars.webp",
+          "png": "/space-tourism-react/assets/destination/image-mars.png",
+          "webp": "/space-tourism-react/assets/destination/image-mars.webp",
           "alt": "the planet mars"
         },
         "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
@@ -29,8 +29,8 @@ export const SiteData = [
         "id": "europa",
         "name": "Europa",
         "images": {
-          "png": "./assets/destination/image-europa.png",
-          "webp": "./assets/destination/image-europa.webp",
+          "png": "/space-tourism-react/assets/destination/image-europa.png",
+          "webp": "/space-tourism-react/assets/destination/image-europa.webp",
           "alt": "the planet europa"
         },
         "description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
@@ -41,8 +41,8 @@ export const SiteData = [
         "id": "titan",
         "name": "Titan",
         "images": {
-          "png": "./assets/destination/image-titan.png",
-          "webp": "./assets/destination/image-titan.webp",
+          "png": "/space-tourism-react/assets/destination/image-titan.png",
+          "webp": "/space-tourism-react/assets/destination/image-titan.webp",
           "alt": "the moon titan"
         },
         "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
@@ -55,8 +55,8 @@ export const SiteData = [
         "id": "commander",
         "name": "Douglas Hurley",
         "images": {
-          "png": "./assets/crew/image-douglas-hurley.png",
-          "webp": "./assets/crew/image-douglas-hurley.webp",
+          "png": "/space-tourism-react/assets/crew/image-douglas-hurley.png",
+          "webp": "/space-tourism-react/assets/crew/image-douglas-hurley.webp",
           "alt": "Douglas Hurley"
         },
         "role": "Commander",
@@ -66,8 +66,8 @@ export const SiteData = [
         "id": "mission",
         "name": "Mark Shuttleworth",
         "images": {
-          "png": "./assets/crew/image-mark-shuttleworth.png",
-          "webp": "./assets/crew/image-mark-shuttleworth.webp",
+          "png": "/space-tourism-react/assets/crew/image-mark-shuttleworth.png",
+          "webp": "/space-tourism-react/assets/crew/image-mark-shuttleworth.webp",
           "alt": "Mark Shuttleworth"
         },
         "role": "Mission Specialist",
@@ -77,8 +77,8 @@ export const SiteData = [
         "id": "pilot",
         "name": "Victor Glover",
         "images": {
-          "png": "./assets/crew/image-victor-glover.png",
-          "webp": "./assets/crew/image-victor-glover.webp",
+          "png": "/space-tourism-react/assets/crew/image-victor-glover.png",
+          "webp": "/space-tourism-react/assets/crew/image-victor-glover.webp",
           "alt": "Victor Glover"
         },
         "role": "Pilot",
@@ -88,8 +88,8 @@ export const SiteData = [
         "id": "crew",
         "name": "Anousheh Ansari",
         "images": {
-          "png": "./assets/crew/image-anousheh-ansari.png",
-          "webp": "./assets/crew/image-anousheh-ansari.webp",
+          "png": "/space-tourism-react/assets/crew/image-anousheh-ansari.png",
+          "webp": "/space-tourism-react/assets/crew/image-anousheh-ansari.webp",
           "alt": "Anousheh Ansari"
         },
         "role": "Flight Engineer",
@@ -101,8 +101,8 @@ export const SiteData = [
         "id": "vehicle",
         "name": "Launch vehicle",
         "images": {
-          "portrait": "./assets/technology/image-launch-vehicle-portrait.jpg",
-          "landscape": "./assets/technology/image-launch-vehicle-landscape.jpg",
+          "portrait": "/space-tourism-react/assets/technology/image-launch-vehicle-portrait.jpg",
+          "landscape": "/space-tourism-react/assets/technology/image-launch-vehicle-landscape.jpg",
           "alt": "Launch vehicle"
         },
         "description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
@@ -111,8 +111,8 @@ export const SiteData = [
         "id": "spaceport",
         "name": "Spaceport",
         "images": {
-          "portrait": "./assets/technology/image-spaceport-portrait.jpg",
-          "landscape": "./assets/technology/image-spaceport-landscape.jpg",
+          "portrait": "/space-tourism-react/assets/technology/image-spaceport-portrait.jpg",
+          "landscape": "/space-tourism-react/assets/technology/image-spaceport-landscape.jpg",
           "alt": "Spaceport"
         },
         "description": "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
@@ -121,8 +121,8 @@ export const SiteData = [
         "id": "capsule",
         "name": "Space capsule",
         "images": {
-          "portrait": "./assets/technology/image-space-capsule-portrait.jpg",
-          "landscape": "./assets/technology/image-space-capsule-landscape.jpg",
+          "portrait": "/space-tourism-react/assets/technology/image-space-capsule-portrait.jpg",
+          "landscape": "/space-tourism-react/assets/technology/image-space-capsule-landscape.jpg",
           "alt": "Space capsule"
         },
         "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
