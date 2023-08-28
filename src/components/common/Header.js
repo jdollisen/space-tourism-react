@@ -42,6 +42,10 @@ export const Header = (props) => {
                         <Link className="ff-sans-cond uppercase text-white letter-spacing-2" to="/space-tourism-react/technology">
                             <span aria-hidden="true">03</span>Technology</Link>
                     </li>
+                    <li className={(location==='spacesavvy')?'active':''}>
+                        <Link className="ff-sans-cond uppercase text-white letter-spacing-2" to="/space-tourism-react/spacesavvy">
+                            <span aria-hidden="true">04</span>Space Savvy</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

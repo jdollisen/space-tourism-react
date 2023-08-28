@@ -1,0 +1,200 @@
+/* Space Savvy Layout */
+$font: "Lato";
+$font-light: 300;
+$font-heavy: 400;
+$gray: hsl(207,5%,40%);
+$light-gray: hsl(214,12%,89%);
+
+.savvy_results {
+    grid-area: chevron;
+    margin-bottom: 2rem;
+    color: var(--clr-white);
+}
+.results_container {
+    background: $light-gray;
+    padding: 1em 2em;
+    grid-area: content;
+    width: 100%;
+    color: $gray;
+    text-align: right;
+}
+.results {
+    background: hsl(var(--clr-hue-white), var(--clr-sat-white), var(--clr-lgt-white));
+    font-family: $font;
+    font-size: var(--fs-200);
+    font-weight: $font-light;
+    min-height: 60vh;
+    padding: 1rem;
+}
+.results {
+    ul {
+        padding: 1rem 1.5rem 1.5rem;
+        --gap: clamp(1.5rem, 3vw, 1.5rem);
+        justify-content: center;
+        background-color: #F9FAFA;
+        margin: 0;
+
+        li {
+            display: inline-grid;
+
+            &:last-child {
+                width: 10%;
+            }
+            label {
+                text-align: left;
+                font-weight: 400;
+            }
+
+            input[type=text], select {
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                 border-radius: 3px;
+                 border: 1px solid $light-gray;
+                 color: $gray;
+                 font-weight: 300;
+                 width: 11rem;
+                 height: 1.9rem;
+                }
+
+            input[type=text]:focus {
+                 outline: none;
+                 border: 1px solid $light-gray;
+                 color: $gray;
+            }
+        }
+    }
+}
+
+.results_grid {
+    border-top: 1px solid;
+    border-color: hsl(var(--clr-hue-light), var(--clr-sat-light), var(--clr-lgt-light));
+    padding: 2rem;
+
+    .total_mission {
+        margin: auto;
+        text-align: center;
+        line-height: 3rem;
+        font-weight: 700;
+        font-size: var(--fs-300);
+    }
+
+    .flex {
+        display: flex;
+        gap: var(--gap, 2rem);
+        padding: 2rem 0;
+        border-bottom: 1px solid $light-gray;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        img {
+            width: 81.57px;
+            height: 79.94px;
+        }
+    }
+}
+
+.results_details {
+    width: 100%;
+    text-align: left;
+
+    .failed {
+        color: red;
+        font-size: var(--fs-100);
+        text-transform: uppercase;
+        margin-left: 1rem;
+    }
+    .launch_title {
+        font-size: var(--fs-400);
+        font-weight: 700;
+
+    }
+
+    .launch_detail {
+        line-height: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .launch_buttons {
+        line-height: 1.5rem;
+
+        a {
+            background-color: #FFFFFF;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            border: 1px solid $light-gray;
+            color: $gray;
+            padding: .5rem .8rem;
+            margin-right: 0.5rem;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+    }
+}
+.flight_no {
+    text-align: center;
+
+    label {
+        font-size: var(--fs-500);
+        font-weight: 400;
+    }
+    p {
+        white-space: nowrap;
+    }
+}
+footer {
+    grid-area: footer;
+    background-color: #e0e3e6;
+    font-size: var(--fs-200);
+    color: $gray;
+    line-height: 2rem;
+    width: 100%;
+    text-align: left;
+    padding: 0 2.5rem 1rem;
+    margin-top: -3rem;
+}
+.top {
+    --offset: 20rem; 
+
+    font-size: var(--fs-200);
+    color: $gray;
+    position: sticky;
+    bottom: 20px;
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+}
+
+/* Smooth scrolling if user doesn't have a preference due to motion sensitivities */
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+@media (max-width: 35rem) {
+    .results {
+        ul {
+            padding: 1rem 1.5rem;
+            --gap: clamp(.5rem, 1vw, .5rem);
+            justify-content: unset;
+            display: grid;
+            text-align: left;
+
+            li {
+                display: block;
+                width: auto;
+                list-style: none;
+
+                &:last-child {
+                    width: auto;
+                    margin: auto;
+                }
+
+                label {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
