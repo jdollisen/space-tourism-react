@@ -121,7 +121,7 @@ export const SearchField = (props) => {
         } else if (searchFieldValues.id === 'keyword' &&
             (value.flight_number.toString() === searchFieldValues.keyword ||
                 value.rocket.rocket_name.toLowerCase().includes(searchFieldValues.keyword.toLowerCase()) ||
-                payload_id.includes(searchFieldValues.keyword.toLowerCase()))
+                payload_id.toString().includes(searchFieldValues.keyword.toLowerCase()))
         ) {
             return value;
         } else if (searchFieldValues.id === 'launchPad' &&
@@ -159,16 +159,16 @@ export const SearchField = (props) => {
     return (<>
         <ul className="flex">
             <li>
-              <label>Keyword</label>
-              <input type="text" placeholder="eg Falcon"
+              <label htmlFor="keyword">Keyword</label>
+              <input id="keyword" type="text" placeholder="eg Falcon"
                 onChange={(e) => {
                     handleKeywordSearch(e.target.value);
                 }}
                 value={searchFieldValues.keyword} />
             </li>
             <li>
-              <label>Launch Pad</label>
-              <select onChange={(e) => {
+              <label htmlFor="launchPad">Launch Pad</label>
+              <select data-testid="launchPad" id="launchPad" onChange={(e) => {
                     handleLaunchPadSearch(e.target.value);
                 }}>
                 <option value="">Any</option>
@@ -236,6 +236,7 @@ export const SearchField = (props) => {
                             {((typeof launch.links.reddit_launch !== 'undefined') && (launch.links.reddit_launch !== null)) && <a href={launch.links.reddit_launch} target="_blank" rel="noopener noreferrer">Reddit Launch</a>}
                             {((typeof launch.links.reddit_media !== 'undefined') && (launch.links.reddit_media !== null)) && <a href={launch.links.reddit_media} target="_blank" rel="noopener noreferrer">Reddit Media</a>}
                             {((typeof launch.links.presskit !== 'undefined') && (launch.links.presskit !== null)) &&<a href={launch.links.presskit} target="_blank" rel="noopener noreferrer">Press Kit</a>}
+                            {((typeof launch.links.article_link !== 'undefined') && (launch.links.article_link !== null)) && <a href={launch.links.article_link} target="_blank" rel="noopener noreferrer">Article Link</a>}
                             {((typeof launch.links.video_link !== 'undefined') && (launch.links.video_link !== null)) && <a href={launch.links.video_link} target="_blank" rel="noopener noreferrer">Watch Video</a>}
                         </p>
                     </div>

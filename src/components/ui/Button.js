@@ -10,6 +10,7 @@ const MyButton = styled.button`
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    cursor: pointer;
 `;
 
 export const Button = (props) => {
