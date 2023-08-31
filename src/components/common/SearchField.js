@@ -8,7 +8,11 @@ export const SearchField = (props) => {
     // Launch Pads Data
     const [launchPads, setLaunchPads] = useState([]);
     const fetchLaunchPadData = () => {
-      fetch("http://localhost:8001/launchpads")
+    // uncomment if working in local
+    //fetch("http://localhost:8001/launchpads")
+
+    //for github deployment use
+    fetch("https://jdollisen.github.io/data/launchpads.json")
         .then(response => {
           return response.json()
         })
@@ -24,7 +28,11 @@ export const SearchField = (props) => {
     // Launches Data
     const [launches, setLaunches] = useState([]);
     const fetchLaunchesData = () => {
-      fetch("http://localhost:8001/launches")
+    // uncomment if working in local
+    //fetch("http://localhost:8001/launches")
+
+    //for github deployment use
+      fetch("https://jdollisen.github.io/data/launches.json")
         .then(response => {
           return response.json()
         })
