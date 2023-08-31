@@ -92,7 +92,14 @@ $light-gray: hsl(214,12%,89%);
             width: 81.57px;
             height: 79.94px;
         }
+
+        @media (max-width: 45rem) {
+            display: block;
+        }
     }
+
+
+
 }
 
 .results_details {
@@ -130,7 +137,16 @@ $light-gray: hsl(214,12%,89%);
             margin-right: 0.5rem;
             white-space: nowrap;
             text-decoration: none;
+            @media (max-width: 45rem) {
+                width: auto;
+                white-space: unset;
+                line-height: 3rem;
+            }
         }
+
+    }
+    @media (max-width: 45rem) {
+        width: auto;
     }
 }
 .flight_no {
@@ -142,6 +158,9 @@ $light-gray: hsl(214,12%,89%);
     }
     p {
         white-space: nowrap;
+    }
+    @media (max-width: 45rem) {
+        padding-top: 1rem;
     }
 }
 footer {
@@ -172,7 +191,10 @@ footer {
     scroll-behavior: smooth;
   }
 }
-@media (max-width: 35rem) {
+@media (max-width: 45rem) {
+    .header-title {
+        padding: 9rem 3rem;
+    }
     .results {
         ul {
             padding: 1rem 1.5rem;
